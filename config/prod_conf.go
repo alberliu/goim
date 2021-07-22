@@ -12,8 +12,7 @@ func initProdConf() {
 		NSQIP:            "127.0.0.1:4150",
 		RedisIP:          "127.0.0.1:6379",
 		RedisPassword:    "liu123456",
-		RPCIntListenAddr: ":50000",
-		RPCExtListenAddr: ":50001",
+		RPCListenAddr:    ":50000",
 		ConnectRPCAddrs:  "addrs:///127.0.0.1:50100,127.0.0.1:50200",
 		BusinessRPCAddrs: "addrs:///127.0.0.1:50300",
 	}
@@ -30,12 +29,11 @@ func initProdConf() {
 	}
 
 	Business = BusinessConf{
-		MySQL:            "root:liu123456@tcp(localhost:3306)/im?charset=utf8&parseTime=true",
-		NSQIP:            "127.0.0.1:4150",
-		RedisIP:          "127.0.0.1:6379",
-		RPCIntListenAddr: ":50300",
-		RPCExtListenAddr: ":50301",
-		LogicRPCAddrs:    "addrs:///127.0.0.1:50000",
+		MySQL:         "root:liu123456@tcp(localhost:3306)/im?charset=utf8&parseTime=true",
+		NSQIP:         "127.0.0.1:4150",
+		RedisIP:       "127.0.0.1:6379",
+		RPCListenAddr: ":50200",
+		LogicRPCAddrs: "addrs:///127.0.0.1:50000",
 	}
 
 	logger.Leavel = zap.DebugLevel
